@@ -35,7 +35,7 @@ def api_dl(video_id: str) -> str:
                 return file_path
             else:
                 print(f"Failed to download {video_id}. Status: {response.status_code}")
-                os.path.exists(file_path):
+                if os.path.exists(file_path):
                 os.remove(file_path)
                 return None
     except requests.RequestException as e:
